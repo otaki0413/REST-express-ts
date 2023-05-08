@@ -1,7 +1,6 @@
-import { authentication } from "../helpers/index";
-import { createUser, getUserByEmail } from "db/users";
 import { Request, Response } from "express";
-import { ramdom } from "helpers";
+import { createUser, getUserByEmail } from "../db/users";
+import { authentication, ramdom } from "../helpers";
 
 export const register = async (req: Request, res: Response) => {
   try {

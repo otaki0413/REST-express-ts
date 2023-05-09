@@ -32,6 +32,8 @@ export const login = async (req: Request, res: Response) => {
     );
 
     await user.save();
+
+    // Cookieに保存
     res.cookie("OTAKI-AUTH", user.authentication.sessionToken, {
       domain: "localhost",
       path: "/",
